@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Биржевой стакан</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем Telegram WebApp API -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="header-title">Биржевой стакан</h1>
+        <p id="pair-title">USDT/TON (Демо)</p>
+
+        <div class="order-book">
+            <div class="asks">
+                <h2>🔴 Продажа (Asks)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Цена (USDT)</th>
+                            <th>Кол-во (TON)</th>
+                            <th>Всего (USDT)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="asks-table-body">
+                        <tr><td colspan="3" class="placeholder">Загрузка...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="last-trade-price" id="last-trade-price-container">
+                --- Загрузка цены ---
+            </div>
+
+            <div class="bids">
+                <h2>🟢 Покупка (Bids)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Цена (USDT)</th>
+                            <th>Кол-во (TON)</th>
+                            <th>Всего (USDT)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bids-table-body">
+                        <tr><td colspan="3" class="placeholder">Загрузка...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="refresh-button">Обновить</button>
+            <!-- <button id="send-data-button">Отправить данные боту (тест)</button> -->
+        </div>
+        <div id="user-info-block"></div>
+        <div id="status-message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
